@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --azul-oscuro: #004F97;
+  --azul-primario: #0080cd;
+  --azul-claro: #00a0ef;
+  --celeste-oscuro: #75cff7;
+  --celeste-claro: #DFF4FD;
+
+  --naranja-oscuro: #C9593E;
+  --naranja-secundario: #F36931;
+  --naranja-claro: #FF903B;
+  --ocre: #FFB853;
+  --ocre-claro: #FFD89E;
+
+  --error: #E85251;
+  --blanco: #FFFFFF;
+  --titulo-sobre-blanco: #363636;
+  --texto-sobre-blanco: #444444;
+  --superficie: #FFFFFF;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  h1 {
+    font-size: 5.5rem;
+    font-weight: regular;
+    line-height: 6.5rem;
+    letter-spacing: 2%;
+  }
+
+  h2 {
+    font-size: 4.0rem;
+    font-weight: bold;
+    line-height: 4.8rem;
+    letter-spacing: 1%;
+  }
+
+  h3 {
+    font-size: 3.0rem;
+    font-weight: bold;
+    line-height: 4.0rem;
+    letter-spacing: 1%;
+  }
+
+  h4 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 3.2rem;
+    letter-spacing: 1%;
+  }
+
+  h5 {
+    font-size: 2.0rem;
+    font-weight: medium;
+    line-height: 2.7rem;
+    letter-spacing: 1%;
+  }
+
+  p {
+    font-size: 1.8rem;
+    font-weight: light;
+    line-height: 2.8rem;
+    letter-spacing: 1%;
+  }
+}
