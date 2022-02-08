@@ -1,3 +1,38 @@
+@font-face {
+  font-family: 'Visuelt Pro';
+  src: url('./assets/Fonts/VisueltPro-Regular.woff2') format('woff2'),
+      url('./assets/Fonts/VisueltPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Visuelt Pro';
+  src: url('./assets/Fonts/VisueltPro-Bold.woff2') format('woff2'),
+      url('./assets/Fonts/VisueltPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Visuelt Pro';
+  src: url('./assets/Fonts/VisueltPro-Light.woff2') format('woff2'),
+      url('./assets/Fonts/VisueltPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Visuelt Pro';
+  src: url('./assets//Fonts/VisueltPro-Medium.woff2') format('woff2'),
+      url('./assets/Fonts/VisueltPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --azul-oscuro: #004F97;
@@ -29,6 +64,8 @@ html {
   font-size: 62.5%;
 
   h1 {
+    font-family: 'Visuelt Pro';
+    font-style: normal;
     font-size: 5.5rem;
     font-weight: regular;
     line-height: 6.5rem;
@@ -36,6 +73,8 @@ html {
   }
 
   h2 {
+    font-family: 'Visuelt Pro';
+    font-style: normal;
     font-size: 4.0rem;
     font-weight: bold;
     line-height: 4.8rem;
@@ -43,6 +82,8 @@ html {
   }
 
   h3 {
+    font-family: 'Visuelt Pro';
+    font-style: normal;
     font-size: 3.0rem;
     font-weight: bold;
     line-height: 4.0rem;
@@ -50,6 +91,8 @@ html {
   }
 
   h4 {
+    font-family: 'Visuelt Pro';
+    font-style: normal;
     font-size: 2.2rem;
     font-weight: bold;
     line-height: 3.2rem;
@@ -57,6 +100,8 @@ html {
   }
 
   h5 {
+    font-family: 'Visuelt Pro';
+    font-style: normal;
     font-size: 2.0rem;
     font-weight: medium;
     line-height: 2.7rem;
@@ -64,6 +109,8 @@ html {
   }
 
   p {
+    font-family: 'Visuelt Pro';
+    font-style: normal;
     font-size: 1.8rem;
     font-weight: light;
     line-height: 2.8rem;
