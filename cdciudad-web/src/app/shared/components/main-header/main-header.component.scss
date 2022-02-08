@@ -7,7 +7,7 @@
 }
 
 .logo-container {
-  width: 20%;
+  width: auto;
   img {
     width: 125px;
     height: 81px;
@@ -29,5 +29,32 @@
     line-height: 1.6rem;
     letter-spacing: 1%;
     color: var(--azul-oscuro);
+  }
+}
+
+@media screen and (max-width: 1275px){
+  .header-main {
+    padding: 40px 30px;
+  }
+}
+
+@media screen and (max-width: 950px){
+  .header-main {
+    justify-content: flex-end;
+    img {
+      width: 90px;
+    }
+  }
+  .nav-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .header-main {
+    padding: 10px 15px;
+    img {
+      width: 80px;
+    }
   }
 }

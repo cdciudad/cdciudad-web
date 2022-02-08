@@ -175,6 +175,8 @@
   }
   .social-contacts__container {
     h5 {
+      display: flex;
+      justify-content: center;
       font-size: 1.7rem;
     }
     .social-network{
