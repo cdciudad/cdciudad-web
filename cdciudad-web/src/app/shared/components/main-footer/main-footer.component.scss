@@ -1,7 +1,7 @@
 .main-footer {
   width: 100%;
-  height:360px;
-  padding: 40px 60px;
+  height: auto;
+  padding: 40px 80px;
   background-color: var(--azul-oscuro);
 }
 
@@ -65,6 +65,7 @@
 }
 
 .contact-container {
+  height: 197px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -85,17 +86,119 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  .first {
+    width: 204px;
+    height: 70px;
+    object-fit: contain;
+    object-position: center;
+  }
+  .second {
+    height: 174px;
+    height: 33px;
+    object-fit: contain;
+    object-position: center;
+  }
 }
 
 .terms-and-conditions {
-  height: 83px;
   display: flex;
   align-items: flex-end;
+  margin-top: 35px;
   p {
     margin-right: 10px;
     color: var(--celeste-oscuro);
   }
   a {
     text-decoration: none;
+  }
+  br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1275px){
+  .main-footer {
+    padding: 40px 20px;
+  }
+  .button-container {
+    input {
+      width: 280px;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px){
+  .information-section {
+    grid-template-columns: 1fr 1fr;
+  }
+  .logos-container {
+    grid-area: 2 / 1 / 2 / 3;
+    display: flex;
+    flex-direction: row;
+    padding-top: 35px;
+  }
+  .terms-and-conditions {
+    p {
+      font-size: 1.4rem;
+      margin: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 820px){
+  .information-section {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 35px;
+  }
+  .logos-container {
+    grid-area: auto;
+    padding-top: 0px;
+  }
+  .terms-and-conditions {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    br {
+      display: block;
+    }
+    .hide {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 450px){
+  .main-footer {
+    padding: 40px 10px;
+  }
+  .social-contacts__container {
+    h5 {
+      font-size: 1.7rem;
+    }
+    .social-network{
+      display: flex;
+      justify-content: space-around;
+      a {
+        margin-right: 0px;
+      }
+    }
+  }
+  .logos-container {
+    flex-direction: column;
+    .first {
+      margin-bottom: 35px;
+    }
+  }
+  .button-container {
+    input {
+      width: 238px;
+    }
+  }
+  .contact-container {
+    p {
+      font-size: 1.5rem;
+    }
   }
 }
