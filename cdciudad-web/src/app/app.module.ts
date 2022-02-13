@@ -7,6 +7,7 @@ import { MainComponent } from './core/pages/main/main.component';
 import { ServicesSelectComponent } from './service-offer/pages/services-select/services-select.component';
 import { MainFooterComponent } from './shared/components/main-footer/main-footer.component';
 import { MainHeaderComponent } from './shared/components/main-header/main-header.component';
+import { SideMenuComponent } from './shared/components/side-menu/side-menu.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MainHeaderComponent } from './shared/components/main-header/main-header
     MainComponent,
     ServicesSelectComponent,
     MainHeaderComponent,
-    MainFooterComponent
+    MainFooterComponent,
+    SideMenuComponent
   ],
   imports: [
     BrowserModule,

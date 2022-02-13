@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.burger-menu {
+  display: none;
+}
+
 .logo-container {
   width: auto;
   img {
@@ -39,8 +43,11 @@
 }
 
 @media screen and (max-width: 950px){
+  .burger-menu {
+    display: block;
+  }
   .header-main {
-    justify-content: flex-end;
+    justify-content: space-between;
     img {
       width: 90px;
     }
