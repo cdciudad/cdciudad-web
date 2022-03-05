@@ -1,57 +1,57 @@
 @font-face {
-  font-family: 'Visuelt Pro';
-  src: url('./assets/Fonts/VisueltPro-Regular.woff2') format('woff2'),
-      url('./assets/Fonts/VisueltPro-Regular.woff') format('woff');
+  font-family: "Visuelt Pro";
+  src: url("./assets/Fonts/VisueltPro-Regular.woff2") format("woff2"),
+    url("./assets/Fonts/VisueltPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Visuelt Pro';
-  src: url('./assets/Fonts/VisueltPro-Bold.woff2') format('woff2'),
-      url('./assets/Fonts/VisueltPro-Bold.woff') format('woff');
+  font-family: "Visuelt Pro";
+  src: url("./assets/Fonts/VisueltPro-Bold.woff2") format("woff2"),
+    url("./assets/Fonts/VisueltPro-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Visuelt Pro';
-  src: url('./assets/Fonts/VisueltPro-Light.woff2') format('woff2'),
-      url('./assets/Fonts/VisueltPro-Light.woff') format('woff');
+  font-family: "Visuelt Pro";
+  src: url("./assets/Fonts/VisueltPro-Light.woff2") format("woff2"),
+    url("./assets/Fonts/VisueltPro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Visuelt Pro';
-  src: url('./assets//Fonts/VisueltPro-Medium.woff2') format('woff2'),
-      url('./assets/Fonts/VisueltPro-Medium.woff') format('woff');
+  font-family: "Visuelt Pro";
+  src: url("./assets//Fonts/VisueltPro-Medium.woff2") format("woff2"),
+    url("./assets/Fonts/VisueltPro-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --azul-oscuro: #004F97;
+  --azul-oscuro: #004f97;
   --azul-primario: #0080cd;
   --azul-claro: #00a0ef;
   --celeste-oscuro: #75cff7;
-  --celeste-claro: #DFF4FD;
+  --celeste-claro: #dff4fd;
 
-  --naranja-oscuro: #C9593E;
-  --naranja-secundario: #F36931;
-  --naranja-claro: #FF903B;
-  --ocre: #FFB853;
-  --ocre-claro: #FFD89E;
+  --naranja-oscuro: #c9593e;
+  --naranja-secundario: #f36931;
+  --naranja-claro: #ff903b;
+  --ocre: #ffb853;
+  --ocre-claro: #ffd89e;
 
-  --error: #E85251;
-  --blanco: #FFFFFF;
+  --error: #e85251;
+  --blanco: #ffffff;
   --titulo-sobre-blanco: #363636;
   --texto-sobre-blanco: #444444;
-  --superficie: #FFFFFF;
+  --superficie: #ffffff;
 }
 
 * {
@@ -64,7 +64,7 @@ html {
   font-size: 62.5%;
 
   h1 {
-    font-family: 'Visuelt Pro';
+    font-family: "Visuelt Pro";
     font-style: normal;
     font-size: 5.5rem;
     font-weight: regular;
@@ -73,25 +73,25 @@ html {
   }
 
   h2 {
-    font-family: 'Visuelt Pro';
+    font-family: "Visuelt Pro";
     font-style: normal;
-    font-size: 4.0rem;
+    font-size: 4rem;
     font-weight: bold;
     line-height: 4.8rem;
     letter-spacing: 1%;
   }
 
   h3 {
-    font-family: 'Visuelt Pro';
+    font-family: "Visuelt Pro";
     font-style: normal;
-    font-size: 3.0rem;
+    font-size: 3rem;
     font-weight: bold;
-    line-height: 4.0rem;
+    line-height: 4rem;
     letter-spacing: 1%;
   }
 
   h4 {
-    font-family: 'Visuelt Pro';
+    font-family: "Visuelt Pro";
     font-style: normal;
     font-size: 2.2rem;
     font-weight: bold;
@@ -100,20 +100,36 @@ html {
   }
 
   h5 {
-    font-family: 'Visuelt Pro';
+    font-family: "Visuelt Pro";
     font-style: normal;
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: medium;
     line-height: 2.7rem;
     letter-spacing: 1%;
   }
 
   p {
-    font-family: 'Visuelt Pro';
+    font-family: "Visuelt Pro";
     font-style: normal;
     font-size: 1.8rem;
     font-weight: light;
     line-height: 2.8rem;
     letter-spacing: 1%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 20px;
+    height: 40px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--azul-oscuro);
+    border: 4px solid transparent;
+    border-radius: 11px;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar * {
+    background: transparent;
   }
 }
