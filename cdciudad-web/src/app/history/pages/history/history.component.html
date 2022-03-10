@@ -33,45 +33,70 @@
       Historia de <br />
       Casa de la Ciudad
     </h1>
-    <button class="play-button" (click)="playVideo()">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="red">
-        <path
-          d="M80,0a80,80,0,1,0,80,80A80,80,0,0,0,80,0Zm35.82,88.3L69.53,114.9a10,10,0,0,1-15-8.67V53a10,10,0,0,1,15-8.67L115.82,71A10,10,0,0,1,115.82,88.3Z"
-        />
-      </svg>
-    </button>
-    <div class="player-container">
-      <vm-player #video_player [paused]="paused">
-        <vm-video
-          cross-origin="true"
-          poster="../../../../assets/foto_casaciudad_franmora.jpg"
-        >
-          <source
-            data-src="https://res.cloudinary.com/casa-de-la-ciudad/video/upload/v1646791951/cdciudad/videos/Master_FINAL_Casa_de_la_Ciudad_qlvqmz_ikxghj.mp4"
-            type="video/mp4"
-          />
-          <track
-            default
-            kind="subtitles"
-            src="https://media.vimejs.com/subs/english.vtt"
-            srclang="en"
-            label="English"
-          />
-        </vm-video>
+    <div class="player-container" (click)="playVideo()">
+      <div class="play-button__container">
+        <div [ngClass]="{ 'display-button': !paused }" class="black-fill"></div>
+        <button [ngClass]="{ 'display-button': !paused }" class="play-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 160 160"
+            fill="#ffffff"
+          >
+            <path
+              d="M80,0a80,80,0,1,0,80,80A80,80,0,0,0,80,0Zm35.82,88.3L69.53,114.9a10,10,0,0,1-15-8.67V53a10,10,0,0,1,15-8.67L115.82,71A10,10,0,0,1,115.82,88.3Z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="player-media">
+        <vm-player #video_player [paused]="paused">
+          <vm-video
+            cross-origin="true"
+            poster="../../../../assets/foto_casaciudad_franmora.jpg"
+          >
+            <source
+              data-src="https://res.cloudinary.com/casa-de-la-ciudad/video/upload/v1646791951/cdciudad/videos/Master_FINAL_Casa_de_la_Ciudad_qlvqmz_ikxghj.mp4"
+              type="video/mp4"
+            />
+            <track
+              default
+              kind="subtitles"
+              src="https://media.vimejs.com/subs/english.vtt"
+              srclang="en"
+              label="English"
+            />
+          </vm-video>
 
-        <vm-default-ui click-to-play no-controls>
-          <vm-default-controls hide-on-mouse-leave hideWhenPaused>
-          </vm-default-controls>
-        </vm-default-ui>
-      </vm-player>
+          <vm-default-ui no-click-to-play no-controls>
+            <vm-default-controls
+              hide-on-mouse-leave
+              hideWhenPaused
+              activeDuration="1000"
+            >
+            </vm-default-controls>
+          </vm-default-ui>
+        </vm-player>
+      </div>
     </div>
     <section class="history-container">
       <div>
         <h2>La historia de su construcción</h2>
         <div [innerHTML]="tem1"></div>
       </div>
-      <div></div>
-      <div></div>
+      <div class="img-container">
+        <img
+          class="img-data"
+          [src]="img1"
+          alt="Fotografiá que muestra una casa antigua de Cartago"
+        />
+      </div>
+      <div class="img-container move-img">
+        <img
+          class="img-data"
+          [src]="img2"
+          alt="Fotografiá que muestra Casa de la Ciudad antiguamente, desde la diagonal Sureste"
+        />
+      </div>
       <div>
         <h2>
           La familia que le da <br />
@@ -83,7 +108,13 @@
         <h2>La historia de su construcción</h2>
         <div [innerHTML]="tem3"></div>
       </div>
-      <div></div>
+      <div class="img-container">
+        <img
+          class="img-data"
+          [src]="img3"
+          alt="Fotografiá antigua de Casa de la Ciudad que indica que fue la primer sede el Tecnológico de Costa Rica"
+        />
+      </div>
     </section>
     <app-card-message class="card-message"></app-card-message>
   </div>

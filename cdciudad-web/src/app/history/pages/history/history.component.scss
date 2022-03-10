@@ -1,7 +1,9 @@
 .main-container {
   width: 100%;
+  padding-top: 90px;
   height: auto;
   position: relative;
+  overflow-x: hidden;
 }
 
 .blob-container {
@@ -9,7 +11,7 @@
   z-index: -1;
 
   svg {
-    width: 1110px;
+    width: 100%;
     height: 820px;
     fill: var(--ocre-claro);
   }
@@ -24,23 +26,38 @@
   }
 }
 
-.image-container {
-  max-width: 75%;
-  height: 50vh;
-  min-width: 860px;
-  margin: 0 auto;
+.player-container {
   position: relative;
+  width: 100%;
+  margin-bottom: 80px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 120px;
+}
+
+.player-media {
+  width: 85%;
+  height: 100%;
+}
+
+.player-container:hover {
+  cursor: pointer;
+  .play-button {
+    width: 150px;
+    height: 150px;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.display-button {
+  display: none;
 }
 
 vm-player {
-  --vm-player-width: 100%;
-  --vm-player-height: 100%;
   --vm-player-border-radius: 15px;
   --vm-player-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.55);
+  --vm-poster-z-index: 1;
+  --vm-player-z-index: 1;
+  --vm-ui-z-index: 1;
 }
 
 .history-container {
@@ -48,6 +65,48 @@ vm-player {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   gap: 80px 50px;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img-data {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 50px 20px;
+    }
+  }
+}
+
+.play-button__container {
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  .black-fill {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.38;
+    border-radius: 15px;
+  }
+  .play-button {
+    width: 110px;
+    height: 110px;
+    background-color: transparent;
+    border: none;
+    transition: 0.5s ease-in-out;
+    position: absolute;
+  }
 }
 
 .card-message {
@@ -56,4 +115,65 @@ vm-player {
   margin-top: 80px;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 1130px) {
+  .content-container {
+    padding: 80px 90px;
+  }
+  .history-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 30px 50px;
+    .img-container {
+      .img-data {
+        margin: 50px 0px;
+      }
+    }
+  }
+  .player-media {
+    width: 100%;
+  }
+  .play-button__container {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 852px) {
+  h2 {
+    font-size: 3rem;
+  }
+  h1 {
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+  }
+  .content-container {
+    padding: 80px 15px;
+  }
+
+  .player-container {
+    svg {
+      width: 80px;
+      transition: 0.5s ease-in-out;
+    }
+  }
+
+  .player-container:hover {
+    svg {
+      width: 100px;
+      transition: 0.5s ease-in-out;
+    }
+  }
+
+  .move-img {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  .blob-container {
+    svg {
+      width: 200%;
+      height: 630px;
+    }
+  }
 }
