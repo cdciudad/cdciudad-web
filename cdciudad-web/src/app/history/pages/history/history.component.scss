@@ -127,16 +127,20 @@ vm-player {
     gap: 30px 50px;
     .img-container {
       .img-data {
-        margin: 50px 0px;
+        width: 90%;
+        margin: 15px 0px;
       }
     }
   }
   .player-media {
-    width: 100%;
+    width: 90%;
   }
   .play-button__container {
     position: absolute;
-    width: 100%;
+    width: 90%;
+  }
+  .move-img {
+    grid-area: 4 / 1 / 5 / 2;
   }
 }
 
@@ -148,8 +152,12 @@ vm-player {
     font-size: 4.5rem;
     line-height: 5.5rem;
   }
+
   .content-container {
-    padding: 80px 15px;
+    padding: 40px 15px;
+    h1 {
+      margin-bottom: 20px;
+    }
   }
 
   .player-container {
@@ -166,14 +174,17 @@ vm-player {
     }
   }
 
-  .move-img {
-    grid-area: 4 / 1 / 5 / 2;
-  }
-
   .blob-container {
     svg {
       width: 200%;
       height: 630px;
     }
+  }
+
+  .player-media {
+    width: 100%;
+  }
+  .play-button__container {
+    width: 100%;
   }
 }
