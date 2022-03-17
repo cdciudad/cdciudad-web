@@ -12,6 +12,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./history/history.module').then((m) => m.HistoryModule),
       },
+      {
+        path: 'equipo',
+        loadChildren: () =>
+          import('./work-team/work-team.module').then((m) => m.WorkTeamModule),
+      },
     ],
   },
 ];
