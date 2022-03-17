@@ -1,0 +1,17 @@
+<nav role="navigation">
+  <div id="menuToggle">
+    <input #checkBox type="checkbox" />
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <ul id="menu">
+      <a href="#"><p>Eventos</p></a>
+      <a href="#"><p>Cursos</p></a>
+      <a href="#"><p>Servicios</p></a>
+      <a href="#"><p>Equipo de trabajo</p></a>
+      <a routerLink="/historia" (click)="closed()"><p>Historia</p></a>
+    </ul>
+  </div>
+</nav>
