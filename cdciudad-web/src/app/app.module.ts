@@ -3,26 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainFooterComponent } from './core/components/main-footer/main-footer.component';
+import { MainHeaderComponent } from './core/components/main-header/main-header.component';
+import { SideMenuComponent } from './core/components/side-menu/side-menu.component';
 import { MainComponent } from './core/pages/main/main.component';
-import { ServicesSelectComponent } from './service-offer/pages/services-select/services-select.component';
-import { MainFooterComponent } from './shared/components/main-footer/main-footer.component';
-import { MainHeaderComponent } from './shared/components/main-header/main-header.component';
-import { SideMenuComponent } from './shared/components/side-menu/side-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    ServicesSelectComponent,
-    MainHeaderComponent,
     MainFooterComponent,
-    SideMenuComponent
+    MainHeaderComponent,
+    SideMenuComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
