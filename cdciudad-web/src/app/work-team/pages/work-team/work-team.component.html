@@ -34,7 +34,7 @@
       equipo de trabajo
     </h1>
     <section class="content-container__work-team">
-      <div class="work-team__search">
+      <section class="work-team__search">
         <div class="search-title">
           <span>
             <svg
@@ -57,7 +57,51 @@
           <a><h5>Docentes</h5></a>
           <a><h5>Administrativos</h5></a>
         </div>
-      </div>
+      </section>
+      <section #dropDown class="search-menu__mobile" (click)="open()">
+        <button
+          #dropDownFocus
+          [ngClass]="dropDownState ? 'show' : 'hidden'"
+          class="menu__mobile-information"
+        >
+          <div class="search-title">
+            <span>
+              <svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.17352 2H13.1735L8.16352 8.3L3.17352 2ZM0.423518 1.61C2.44352 4.2 6.17352 9 6.17352 9V15C6.17352 15.55 6.62352 16 7.17352 16H9.17352C9.72352 16 10.1735 15.55 10.1735 15V9C10.1735 9 13.8935 4.2 15.9135 1.61C16.4235 0.95 15.9535 0 15.1235 0H1.21352C0.383518 0 -0.0864821 0.95 0.423518 1.61Z"
+                  fill="#0080CD"
+                />
+              </svg>
+            </span>
+            <h4>Filtrar por:</h4>
+          </div>
+          <svg
+            class="arrow-button-effect"
+            width="17"
+            height="16"
+            viewBox="0 0 17 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="arrow-down"
+              d="M3.6364 4.8636C3.28492 4.51213 2.71508 4.51213 2.3636 4.8636C2.01213 5.21508 2.01213 5.78492 2.3636 6.1364L3.6364 4.8636ZM8.5 11L7.8636 11.6364C8.21508 11.9879 8.78492 11.9879 9.1364 11.6364L8.5 11ZM14.6364 6.1364C14.9879 5.78492 14.9879 5.21508 14.6364 4.8636C14.2849 4.51213 13.7151 4.51213 13.3636 4.8636L14.6364 6.1364ZM2.3636 6.1364L7.8636 11.6364L9.1364 10.3636L3.6364 4.8636L2.3636 6.1364ZM9.1364 11.6364L14.6364 6.1364L13.3636 4.8636L7.8636 10.3636L9.1364 11.6364Z"
+              fill="var(--azul-primario)"
+            />
+          </svg>
+          <section class="dropdown-menu">
+            <a class="dropdown-button"><h5>Mostrar todos</h5></a>
+            <a class="dropdown-button"><h5>Docentes</h5></a>
+            <a class="dropdown-button"><h5>Administrativos</h5></a>
+          </section>
+        </button>
+      </section>
       <div class="work-team__display">
         <div class="display-layout">
           <div class="profile-cars">
