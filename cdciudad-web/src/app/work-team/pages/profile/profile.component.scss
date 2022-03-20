@@ -37,7 +37,7 @@
   display: flex;
   justify-content: center;
   img {
-    width: 80%;
+    width: 75%;
     height: 100%;
     object-fit: cover;
     object-position: center;
@@ -68,7 +68,7 @@
 }
 
 .card-container {
-  padding: 40px 30px;
+  padding: 40px 25px;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
@@ -96,9 +96,53 @@
   .content-container {
     padding: 50px 60px;
   }
+
+  .banner-container {
+    height: 40vh;
+  }
+
   .banner-container {
     img {
       border-radius: 15px;
     }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .container-profile {
+    padding: 0px 10em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content-container {
+    padding: 80px 40px;
+  }
+
+  .information-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .container-profile {
+    padding: 0px 0em;
+  }
+
+  .container-profile {
+    width: 35%;
+  }
+  .container-information {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .content-container {
+    padding: 80px 157px;
+  }
+
+  .container-profile {
+    width: 30%;
   }
 }
