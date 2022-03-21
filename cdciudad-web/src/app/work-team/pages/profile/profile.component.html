@@ -60,6 +60,78 @@
         </article>
       </div>
     </section>
-    <section></section>
+    <section class="slider-container">
+      <div class="slider">
+        <button class="button-left" (click)="scrollLeftTo()">
+          <svg
+            width="23"
+            height="23"
+            viewBox="0 0 23 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_610_733)">
+              <path
+                d="M16.9508 22.2003C17.6948 21.4172 17.6948 20.1523 16.9508 19.3692L9.54977 11.5786L16.9508 3.78798C17.6948 3.0049 17.6948 1.73993 16.9508 0.956848C16.2069 0.173773 15.0052 0.173773 14.2613 0.956848L5.50588 10.1731C4.76196 10.9561 4.76196 12.2211 5.50588 13.0042L14.2613 22.2204C14.9861 22.9834 16.2069 22.9834 16.9508 22.2003Z"
+                fill="white"
+              />
+            </g>
+          </svg>
+        </button>
+        <button class="button-right" (click)="scrollRightTo()">
+          <svg
+            width="22"
+            height="23"
+            viewBox="0 0 22 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_610_765)">
+              <path
+                d="M5.56087 0.958373C4.81695 1.74145 4.81695 3.00642 5.56087 3.7895L12.9619 11.5801L5.56087 19.3707C4.81695 20.1538 4.81695 21.4188 5.56087 22.2018C6.30479 22.9849 7.50651 22.9849 8.25044 22.2018L17.0058 12.9856C17.7498 12.2026 17.7498 10.9376 17.0058 10.1545L8.25044 0.938294C7.52559 0.175296 6.30479 0.175296 5.56087 0.958373Z"
+                fill="white"
+              />
+            </g>
+          </svg>
+        </button>
+        <div class="slides" #slides_container>
+          <div class="slide-1">
+            <div class="box">
+              <div class="slide-img">
+                <img src="../../../../assets/1.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="slide-2">
+            <div class="box">
+              <div class="slide-img">
+                <img src="../../../../assets/2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="slide-3">
+            <div class="box">
+              <div class="slide-img">
+                <img src="../../../../assets/3.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="slide-4">
+            <div class="box">
+              <div class="slide-img">
+                <img src="../../../../assets/4.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="slide-5">
+            <div class="box">
+              <div class="slide-img">
+                <img src="../../../../assets/5.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </section>
