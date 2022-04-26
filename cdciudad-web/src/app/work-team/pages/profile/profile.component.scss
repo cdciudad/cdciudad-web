@@ -6,6 +6,20 @@
   overflow-x: hidden;
 }
 
+.blob-container {
+  top: 60%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  z-index: -1;
+
+  svg {
+    width: 100%;
+    height: 400px;
+    fill: var(--ocre-claro);
+  }
+}
+
 .content-container {
   width: 100%;
   padding-top: 30px;
@@ -217,6 +231,13 @@
 @media screen and (min-width: 1024px) {
   .content-container {
     padding: 80px 40px;
+  }
+
+  .blob-container {
+    top: 30%;
+    svg {
+      height: 550px;
+    }
   }
 
   .information-container {
