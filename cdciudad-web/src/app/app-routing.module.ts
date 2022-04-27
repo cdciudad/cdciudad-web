@@ -17,6 +17,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./work-team/work-team.module').then((m) => m.WorkTeamModule),
       },
+      {
+        path: 'servicios',
+        loadChildren: () =>
+          import('./service-offer/service-offer.module').then(
+            (m) => m.ServiceOfferModule
+          ),
+      },
     ],
   },
 ];
