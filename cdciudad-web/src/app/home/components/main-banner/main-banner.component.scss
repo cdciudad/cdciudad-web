@@ -1,0 +1,128 @@
+.main-container {
+  max-width: 1400px;
+  min-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 150px;
+  overflow-x: hidden;
+}
+
+.tittle-container {
+  width: 50%;
+  position: relative;
+
+  h1 {
+    color: var(--naranja-claro);
+  }
+
+  .part-one {
+    position: relative;
+    left: -30px;
+  }
+
+  .part-two {
+    position: relative;
+    margin-left: 10px;
+  }
+  h5 {
+    margin-top: 20px;
+    margin-left: 10px;
+    color: var(--texto-sobre-blanco);
+  }
+  button {
+    margin-top: 40px;
+    margin-left: 10px;
+    width: 190px;
+    height: 50px;
+    border-radius: 4px;
+    color: var(--naranja-claro);
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--naranja-claro);
+    transition: .5s ease-in-out;
+  }
+  button:hover {
+    color: var(--blanco);
+    background-color: var(--naranja-claro);
+    transition: .5s ease-in-out;
+  }
+
+  .slide-container {
+    margin-top: 45px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+
+    .slide-down {
+      text-decoration: underline;
+      color: var(--texto-sobre-blanco);
+    }
+
+    svg {
+      margin-left: 8px;
+    }
+  }
+}
+
+.info-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 885px) {
+  .main-container {
+    max-width: 600px;
+    min-width: 300px;
+    flex-direction: column;
+    padding: 25px 22px;
+  }
+  .tittle-container {
+    width: 100%;
+    margin-bottom: 20px;
+    .part-one {
+      width: fit-content;
+      position: relative;
+      left: -35px;
+    }
+    .part-two {
+      width: fit-content;
+      position: relative;
+      left: 20px;
+    }
+  }
+  .info-container {
+    width: auto;
+  }
+  h1 {
+    font-size: 4.5rem;
+    line-height: 4.2rem;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .tittle-container {
+    .part-one {
+      position: relative;
+      left: -5px;
+    }
+    .part-two {
+      position: relative;
+      left: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-container {
+    min-width: 280px;
+    padding: 25px 5px;
+  }
+}
