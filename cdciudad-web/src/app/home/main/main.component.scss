@@ -34,7 +34,7 @@
 }
 
 .blob-container_enrollment {
-  top: 132vh;
+  top: 152vh;
   right: -80;
   width: 100%;
   position: absolute;
@@ -54,13 +54,48 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .blob-container_know {
+    top: 80vh;
+  }
+
+  .blob-container_enrollment {
+    top: 210vh;
+    .enrollment {
+      height: 550px;
+    }
+  }
+}
 
 @media screen and (max-width: 852px) {
   .main-container {
-    padding: 200px 15px;
+    padding: 100px 15px;
     h1 {
       font-size: 4.5rem;
       margin-bottom: 55px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .blob-container_banner {
+    top: -200px;
+    right: -20vw;
+  }
+
+  .blob-container_know {
+    top: 105vh;
+    left: -100px;
+    .know {
+      height: 550px;
+    }
+  }
+
+  .blob-container_enrollment {
+    top: 210vh;
+    .enrollment {
+      width: 100%;
+      height: 400px;
     }
   }
 }
@@ -73,7 +108,16 @@
     }
   }
 
+  .blob-container_know {
+    top: 95vh;
+    left: -100px;
+    .know {
+      height: 550px;
+    }
+  }
+
   .blob-container_enrollment {
+    top: 200vh;
     .enrollment {
       width: 100%;
       height: 300px;

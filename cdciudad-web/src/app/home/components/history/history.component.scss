@@ -128,3 +128,9 @@ vm-player {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 425px) {
+  h5 {
+    font-size: 1.8rem;
+  }
+}
