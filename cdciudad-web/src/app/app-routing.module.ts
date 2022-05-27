@@ -13,14 +13,9 @@ const routes: Routes = [
           import('./home/home.module').then((m) => m.HomeModule),
       },
       {
-        path: 'historia',
+        path: 'cursos',
         loadChildren: () =>
-          import('./history/history.module').then((m) => m.HistoryModule),
-      },
-      {
-        path: 'equipo',
-        loadChildren: () =>
-          import('./work-team/work-team.module').then((m) => m.WorkTeamModule),
+          import('./courses/courses.module').then((m) => m.CoursesModule),
       },
       {
         path: 'servicios',
@@ -28,6 +23,16 @@ const routes: Routes = [
           import('./service-offer/service-offer.module').then(
             (m) => m.ServiceOfferModule
           ),
+      },
+      {
+        path: 'equipo',
+        loadChildren: () =>
+          import('./work-team/work-team.module').then((m) => m.WorkTeamModule),
+      },
+      {
+        path: 'historia',
+        loadChildren: () =>
+          import('./history/history.module').then((m) => m.HistoryModule),
       },
     ],
   },
