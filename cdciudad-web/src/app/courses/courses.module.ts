@@ -10,7 +10,8 @@ import { MainBannerComponent } from './components/pay/main-banner/main-banner.co
 import { VideoInformationComponent } from './components/pay/video-information/video-information.component';
 import { StepsFollowComponent } from './components/pay/steps-follow/steps-follow.component';
 import { CardCourseComponent } from './components/pay/card-course/card-course.component';
-
+import { PayCourseSelectComponent } from './pages/pay-course-select/pay-course-select.component';
+import { CourseSelectComponent } from './pages/course-select/course-select.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,9 @@ import { CardCourseComponent } from './components/pay/card-course/card-course.co
     VideoInformationComponent,
     StepsFollowComponent,
     CardCourseComponent,
+    PayCourseSelectComponent,
+    CourseSelectComponent,
   ],
-  imports: [
-    CommonModule,
-    CoursesRoutingModule,
-    VimeModule
-  ]
+  imports: [CommonModule, CoursesRoutingModule, VimeModule],
 })
-export class CoursesModule { }
+export class CoursesModule {}
