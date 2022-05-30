@@ -34,6 +34,10 @@ const routes: Routes = [
         loadChildren: () =>
           import('./history/history.module').then((m) => m.HistoryModule),
       },
+      {
+        path: 'preguntas',
+        loadChildren: () => import('./faq/faq.module').then((m) => m.FaqModule),
+      },
     ],
   },
 ];
