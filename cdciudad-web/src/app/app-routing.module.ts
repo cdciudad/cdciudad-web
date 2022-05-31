@@ -8,14 +8,35 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: 'historia',
+        path: '',
         loadChildren: () =>
-          import('./history/history.module').then((m) => m.HistoryModule),
+          import('./home/home.module').then((m) => m.HomeModule),
+      },
+      {
+        path: 'cursos',
+        loadChildren: () =>
+          import('./courses/courses.module').then((m) => m.CoursesModule),
+      },
+      {
+        path: 'servicios',
+        loadChildren: () =>
+          import('./service-offer/service-offer.module').then(
+            (m) => m.ServiceOfferModule
+          ),
       },
       {
         path: 'equipo',
         loadChildren: () =>
           import('./work-team/work-team.module').then((m) => m.WorkTeamModule),
+      },
+      {
+        path: 'historia',
+        loadChildren: () =>
+          import('./history/history.module').then((m) => m.HistoryModule),
+      },
+      {
+        path: 'preguntas',
+        loadChildren: () => import('./faq/faq.module').then((m) => m.FaqModule),
       },
     ],
   },

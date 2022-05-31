@@ -1,0 +1,51 @@
+<section class="main-container">
+  <div class="description-container">
+    <h2>¿Sabés cómo pagar tus cursos?</h2>
+    <h5>En este video te lo explicamos</h5>
+  </div>
+  <div class="player-container" (click)="playVideo()">
+    <div class="play-button__container">
+      <div [ngClass]="{ 'display-button': !paused }" class="black-fill"></div>
+      <button [ngClass]="{ 'display-button': !paused }" class="play-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 160 160"
+          fill="#ffffff"
+        >
+          <path
+            d="M80,0a80,80,0,1,0,80,80A80,80,0,0,0,80,0Zm35.82,88.3L69.53,114.9a10,10,0,0,1-15-8.67V53a10,10,0,0,1,15-8.67L115.82,71A10,10,0,0,1,115.82,88.3Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="player-media">
+      <vm-player #video_player [paused]="paused">
+        <vm-video
+          cross-origin="true"
+          poster="../../../../assets/foto_casaciudad_franmora.jpg"
+        >
+          <source
+            data-src="https://res.cloudinary.com/casa-de-la-ciudad/video/upload/v1646791951/cdciudad/videos/Master_FINAL_Casa_de_la_Ciudad_qlvqmz_ikxghj.mp4"
+            type="video/mp4"
+          />
+          <track
+            default
+            kind="subtitles"
+            src="https://media.vimejs.com/subs/english.vtt"
+            srclang="en"
+            label="English"
+          />
+        </vm-video>
+
+        <vm-default-ui no-click-to-play no-controls>
+          <vm-default-controls
+            hide-on-mouse-leave
+            hideWhenPaused
+            activeDuration="1000"
+          >
+          </vm-default-controls>
+        </vm-default-ui>
+      </vm-player>
+    </div>
+  </div>
+</section>

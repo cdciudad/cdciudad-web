@@ -8,8 +8,17 @@
 
     <ul id="menu">
       <a href="#"><p>Eventos</p></a>
-      <a href="#"><p>Cursos</p></a>
-      <a href="#"><p>Servicios</p></a>
+      <a (click)="showCoursesMenu()"><p>Cursos</p></a>
+      <div class="courses-menu" [class.showMenu]="coursesMenu">
+        <a href="#" (click)="closed()"><p>Oferta de cursos</p></a>
+        <a routerLink="/cursos/matricula" (click)="closed()"
+          ><p>Matrícula</p></a
+        >
+        <a routerLink="/cursos/pago" (click)="closed()"
+          ><p>Pago de cursos</p></a
+        >
+      </div>
+      <a routerLink="/servicios" (click)="closed()"><p>Servicios</p></a>
       <a routerLink="/equipo" (click)="closed()"><p>Equipo de trabajo</p></a>
       <a routerLink="/historia" (click)="closed()"><p>Historia</p></a>
     </ul>
