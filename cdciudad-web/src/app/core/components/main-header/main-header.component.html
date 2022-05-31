@@ -1,19 +1,28 @@
 <header class="header-main">
-  <div class="burger-menu">
-    <app-side-menu></app-side-menu>
-  </div>
-  <div class="logo-container">
-    <img
-      routerLink=""
-      src="./../../../../assets/img/Logo-simple-CC.svg"
-      alt="Logo de Casa de la Ciudad"
-    />
-  </div>
-  <nav class="nav-container">
-    <a href="#"><p>Eventos</p></a>
-    <a routerLink="/cursos/pago-matricula"><p>Cursos</p></a>
-    <a routerLink="/servicios"><p>Servicios</p></a>
-    <a routerLink="/equipo"><p>Equipo de trabajo</p></a>
-    <a routerLink="/historia"><p>Historia</p></a>
-  </nav>
+  <section class="main-menu">
+    <div class="burger-menu">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="logo-container">
+      <img
+        routerLink=""
+        src="./../../../../assets/img/Logo-simple-CC.svg"
+        alt="Logo de Casa de la Ciudad"
+      />
+    </div>
+    <nav class="nav-container">
+      <a href="#"><p>Eventos</p></a>
+      <a class="courses-btn" (click)="showDeepMenu()"><p>Cursos</p></a>
+      <a routerLink="/servicios"><p>Servicios</p></a>
+      <a routerLink="/equipo"><p>Equipo de trabajo</p></a>
+      <a routerLink="/historia"><p>Historia</p></a>
+    </nav>
+  </section>
+  <section class="deep-menu" [class.show]="deepMenu">
+    <nav class="nav-deep">
+      <a href="#"><p>Oferta de cursos</p></a>
+      <a routerLink="/cursos/matricula"><p>Matrícula</p></a>
+      <a routerLink="/cursos/pago"><p>Pago de cursos</p></a>
+    </nav>
+  </section>
 </header>

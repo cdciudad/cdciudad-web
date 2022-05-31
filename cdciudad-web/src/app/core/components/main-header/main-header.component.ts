@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-header.component.scss'],
 })
 export class MainHeaderComponent {
+  deepMenu: boolean = false;
+
   constructor() {}
+
+  showDeepMenu(): void {
+    this.deepMenu = !this.deepMenu;
+  }
 }

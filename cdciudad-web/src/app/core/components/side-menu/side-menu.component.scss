@@ -11,9 +11,11 @@
 #menuToggle a {
   text-decoration: none;
   color: var(--blanco);
+  cursor: pointer;
   transition: color 0.3s ease;
+
   p {
-    margin: 20px 0px;
+    margin-bottom: 20px;
   }
 }
 
@@ -99,3 +101,26 @@
 #menuToggle input:checked ~ ul {
   transform: none;
 }
+
+
+.courses-menu {
+  margin-left: 25px;
+  max-height: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition: max-height 0.95s ease-out, opacity 0.45s ease-in, visibility 0.45s ease-in;
+
+  &.showMenu {
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 0.45s ease-in, opacity 0.95s ease-in;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .courses-menu {
+    margin-left: 15px;
+  }
+}
+
