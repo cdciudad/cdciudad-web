@@ -30,65 +30,62 @@
   <div class="content-container">
     <section class="banner-container">
       <img
-        src="../../../../assets/perfil-banner.jpg"
-        alt="Banner del perfil de la persona"
+        [src]="person?.banner_picture"
+        [alt]="'Banner del perfil de' + person?.name"
       />
-      <h1>Natalia Ramírez</h1>
+      <h1>{{ person?.name }}</h1>
     </section>
     <section class="information-container">
       <div class="container-profile">
         <div class="profile-image">
           <img
-            src="../../../../assets/profe.png"
-            alt="Imagen de perfil de la persona"
+            [src]="person?.profile_picture"
+            [alt]="'Imagen de perfil de' + person?.name"
           />
         </div>
         <div class="profile-contact">
-          <h2>Natalia Ramírez</h2>
-          <div class="contact-container">
+          <h2>{{ person?.name }}</h2>
+          <!-- En desarrollo -->
+          <!-- <div class="contact-container">
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
-          </div>
+          </div> -->
         </div>
         <div class="card-container">
           <h3>Sobre Natalia...</h3>
-          <p><b>Profesión: </b>Gestora y promotora socio-cultural</p>
-          <p><b>Hobbies: </b>Lectura, senderismo y recreación</p>
-          <p><b>Años de experiencia: </b>14</p>
-          <p><b>Cursos: </b>Teatro I, Teatro II, Teatro III</p>
+          <p><b>Profesión: </b>{{ person?.job }}</p>
+          <p><b>Hobbies: </b>{{ person?.hobbies }}</p>
+          <p><b>Años de experiencia: </b>{{ person?.years_of_experience }}</p>
+          <p *ngIf="person?.courses"><b>Cursos: </b>{{ person?.courses }}</p>
         </div>
       </div>
       <div class="container-information">
         <article class="perfil-information">
           <h3>Hola, soy Natalia...</h3>
           <p>
-            La cultura transforma las sociedades y el amor por lo que se hace
-            transforma tu vida y la de los demás…
+            {{ person?.hello_there }}
           </p>
         </article>
-        <article class="perfil-information">
+        <article *ngIf="person?.what_i_do" class="perfil-information">
           <h3>¿Qué labores realizo?</h3>
-          <p>
-            Me encargo de las áreas de Programación artística, Desarrollo de
-            festivales, Manejo técnico del equipo electrónico para espectáculos,
-            Comunicación y mercadeo, y Acompañamiento de personas asistentes y
-            voluntarias.
+          <p *ngFor="let text of person.what_i_do">{{ text }}</p>
+        </article>
+        <article *ngIf="person?.schooling" class="perfil-information">
+          <h3>Formación académica</h3>
+          <p *ngFor="let text of person.schooling">
+            {{ text }}
           </p>
         </article>
         <article class="perfil-information">
           <h3>Acerca de mi experiencia</h3>
           <p>
-            Tengo conocimientos y experiencia en actuación, recreación, técnicas
-            pedagógicas y mercadeo; por más de una década me he dedicado a la
-            gestión cultural en el cantón de Cartago, Costa Rica, y a la
-            capacitación lúdica donde pueda compartir y disfrutar con las
-            personas.
+            {{ person?.experience }}
           </p>
         </article>
       </div>
     </section>
-    <section class="slider-container">
+    <section *ngIf="person?.staff_type === 'teacher'" class="slider-container">
       <div class="slider">
         <button class="button-left" (click)="scrollLeftTo()">
           <svg
@@ -123,38 +120,10 @@
           </svg>
         </button>
         <div class="slides" #slides_container>
-          <div class="slide-1">
+          <div *ngFor="let picture of person.gallery" class="slide-1">
             <div class="box">
               <div class="slide-img">
-                <img src="../../../../assets/1.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="slide-2">
-            <div class="box">
-              <div class="slide-img">
-                <img src="../../../../assets/2.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="slide-3">
-            <div class="box">
-              <div class="slide-img">
-                <img src="../../../../assets/3.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="slide-4">
-            <div class="box">
-              <div class="slide-img">
-                <img src="../../../../assets/4.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="slide-5">
-            <div class="box">
-              <div class="slide-img">
-                <img src="../../../../assets/5.jpg" alt="" />
+                <img [src]="picture" alt="" />
               </div>
             </div>
           </div>

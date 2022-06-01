@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { SearchTeam } from '../models/team';
+import { Person, SearchTeam } from '../models/team';
 
 @Injectable({
   providedIn: 'root',
@@ -15,5 +15,13 @@ export class TeamService {
 
   getAllStaff() {
     return this.http.get<SearchTeam[]>(`${environment.urlAPI}/staff`);
+  }
+
+  getTeacher(id: string) {
+    return this.http.get<Person>(`${environment.urlAPI}/teacher/${id}`);
+  }
+
+  getStaff(id: string) {
+    return this.http.get<Person>(`${environment.urlAPI}/staff/${id}`);
   }
 }

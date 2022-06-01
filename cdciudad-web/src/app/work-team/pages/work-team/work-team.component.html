@@ -112,7 +112,7 @@
         <div class="display-layout">
           <div
             *ngFor="let person of showList"
-            [routerLink]="'./' + person._id"
+            [routerLink]="'./' + person.staff_type + '/' + person._id"
             class="profile-cars"
           >
             <img [src]="person.profile_picture" />
