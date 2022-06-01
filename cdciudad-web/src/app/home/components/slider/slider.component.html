@@ -2,24 +2,69 @@
   <h2>¡Estos son nuestros profes!</h2>
   <section id="slider">
     <input type="radio" name="slider" #s1 id="s1" />
-    <input type="radio" name="slider" #s2 id="s2" checked />
-    <input type="radio" name="slider" #s3 id="s3" />
+    <input type="radio" name="slider" #s2 id="s2" />
+    <input type="radio" name="slider" #s3 id="s3" checked />
     <input type="radio" name="slider" #s4 id="s4" />
     <input type="radio" name="slider" #s5 id="s5" />
-    <label for="s1" id="slide1" (click)="goToTeachersView(s1.checked, s1.id)">
-      <img src="../../../assets/1.jpg" alt="" />
+    <label
+      for="s1"
+      id="slide1"
+      (click)="goToTeachersView(s1.checked, teacherList[0]._id)"
+    >
+      <img
+        [src]="teacherList[0]?.profile_picture"
+        alt="{{
+          'Imagen del perfil del profesor' + ' ' + teacherList[0]?.name
+        }}"
+      />
     </label>
-    <label for="s2" id="slide2" (click)="goToTeachersView(s2.checked, s2.id)">
-      <img src="../../../assets/2.jpg" alt="" />
+    <label
+      for="s2"
+      id="slide2"
+      (click)="goToTeachersView(s2.checked, teacherList[1]._id)"
+    >
+      <img
+        [src]="teacherList[1]?.profile_picture"
+        alt="{{
+          'Imagen del perfil del profesor' + ' ' + teacherList[1]?.name
+        }}"
+      />
     </label>
-    <label for="s3" id="slide3" (click)="goToTeachersView(s3.checked, s3.id)">
-      <img src="../../../assets/3.jpg" alt="" />
+    <label
+      for="s3"
+      id="slide3"
+      (click)="goToTeachersView(s3.checked, teacherList[2]._id)"
+    >
+      <img
+        [src]="teacherList[2]?.profile_picture"
+        alt="{{
+          'Imagen del perfil del profesor' + ' ' + teacherList[2]?.name
+        }}"
+      />
     </label>
-    <label for="s4" id="slide4" (click)="goToTeachersView(s4.checked, s4.id)">
-      <img src="../../../assets/4.jpg" alt="" />
+    <label
+      for="s4"
+      id="slide4"
+      (click)="goToTeachersView(s4.checked, teacherList[3]._id)"
+    >
+      <img
+        [src]="teacherList[3]?.profile_picture"
+        alt="{{
+          'Imagen del perfil del profesor' + ' ' + teacherList[3]?.name
+        }}"
+      />
     </label>
-    <label for="s5" id="slide5" (click)="goToTeachersView(s5.checked, s5.id)">
-      <img src="../../../assets/5.jpg" alt="" />
+    <label
+      for="s5"
+      id="slide5"
+      (click)="goToTeachersView(s5.checked, teacherList[4]._id)"
+    >
+      <img
+        [src]="teacherList[4]?.profile_picture"
+        alt="{{
+          'Imagen del perfil del profesor' + ' ' + teacherList[4]?.name
+        }}"
+      />
     </label>
   </section>
   <button routerLink="./equipo"><p>Ver todos los profes</p></button>
