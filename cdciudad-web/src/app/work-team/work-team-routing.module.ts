@@ -10,7 +10,7 @@ const routes: Routes = [
     component: WorkTeamComponent,
   },
   {
-    path: ':id',
+    path: ':staff_type/:id',
     component: ProfileComponent,
   },
 ];
