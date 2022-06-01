@@ -53,9 +53,9 @@
           <p>Filtrar por:</p>
         </div>
         <div class="search-buttons">
-          <a><h5>Mostrar todos</h5></a>
-          <a><h5>Docentes</h5></a>
-          <a><h5>Administrativos</h5></a>
+          <a (click)="changeList('all')"><h5>Mostrar todos</h5></a>
+          <a (click)="changeList('teachers')"><h5>Docentes</h5></a>
+          <a (click)="changeList('staff')"><h5>Administrativos</h5></a>
         </div>
       </section>
       <section #dropDown class="search-menu__mobile" (click)="open()">
@@ -96,38 +96,28 @@
             />
           </svg>
           <section class="dropdown-menu">
-            <a class="dropdown-button"><h5>Mostrar todos</h5></a>
-            <a class="dropdown-button"><h5>Docentes</h5></a>
-            <a class="dropdown-button"><h5>Administrativos</h5></a>
+            <a (click)="changeList('all')" class="dropdown-button"
+              ><h5>Mostrar todos</h5></a
+            >
+            <a (click)="changeList('teachers')" class="dropdown-button"
+              ><h5>Docentes</h5></a
+            >
+            <a (click)="changeList('staff')" class="dropdown-button"
+              ><h5>Administrativos</h5></a
+            >
           </section>
         </button>
       </section>
       <div class="work-team__display">
         <div class="display-layout">
-          <div routerLink="./1" class="profile-cars">
-            <img src="../../../../assets/profe.png" />
-            <h4>Natalia Ramírez</h4>
-            <p>Área Artes dramáticas</p>
-          </div>
-          <div routerLink="./1" class="profile-cars">
-            <img src="../../../../assets/profe.png" />
-            <h4>Natalia Ramírez</h4>
-            <p>Área Artes dramáticas</p>
-          </div>
-          <div routerLink="./1" class="profile-cars">
-            <img src="../../../../assets/profe.png" />
-            <h4>Natalia Ramírez</h4>
-            <p>Área Artes dramáticas</p>
-          </div>
-          <div routerLink="./1" class="profile-cars">
-            <img src="../../../../assets/profe.png" />
-            <h4>Natalia Ramírez</h4>
-            <p>Área Artes dramáticas</p>
-          </div>
-          <div routerLink="./1" class="profile-cars">
-            <img src="../../../../assets/profe.png" />
-            <h4>Natalia Ramírez</h4>
-            <p>Área Artes dramáticas</p>
+          <div
+            *ngFor="let person of showList"
+            [routerLink]="'./' + person.staff_type + '/' + person._id"
+            class="profile-cars"
+          >
+            <img [src]="person.profile_picture" />
+            <h4>{{ person.name }}</h4>
+            <p>{{ person.department }}</p>
           </div>
         </div>
       </div>

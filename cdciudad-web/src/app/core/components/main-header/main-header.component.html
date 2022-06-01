@@ -20,9 +20,13 @@
   </section>
   <section class="deep-menu" [class.show]="deepMenu">
     <nav class="nav-deep">
-      <a href="#"><p>Oferta de cursos</p></a>
-      <a routerLink="/cursos/matricula"><p>Matrícula</p></a>
-      <a routerLink="/cursos/pago"><p>Pago de cursos</p></a>
+      <a href="#" (click)="showDeepMenu()"><p>Oferta de cursos</p></a>
+      <a routerLink="/cursos/matricula" (click)="showDeepMenu()"
+        ><p>Matrícula</p></a
+      >
+      <a routerLink="/cursos/pago" (click)="showDeepMenu()"
+        ><p>Pago de cursos</p></a
+      >
     </nav>
   </section>
 </header>
