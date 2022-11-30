@@ -35,6 +35,11 @@
 
   h3 {
     margin-bottom: 10px;
+    color: var(--titulo-sobre-blanco);
+  }
+
+  p {
+    color: var(--texto-sobre-blanco);
   }
 }
 
@@ -98,6 +103,7 @@
   }
   h5 {
     transition: 0.5s all;
+    color: var(--titulo-sobre-blanco);
   }
 }
 

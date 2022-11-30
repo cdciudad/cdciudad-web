@@ -69,8 +69,14 @@ vm-player {
   justify-content: center;
   align-items: center;
 
-  h2, h5 {
+  h2 {
     margin-bottom: 30px;
+    color: var(--titulo-sobre-blanco);
+  }
+
+  h5 {
+    margin-bottom: 30px;
+    color: var(--texto-sobre-blanco);
   }
 
   a {

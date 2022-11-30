@@ -20,6 +20,7 @@
 .content-container {
   width: 100%;
   padding: 80px 157px;
+
   h1 {
     color: var(--azul-oscuro);
     margin-bottom: 75px;
@@ -66,14 +67,20 @@ vm-player {
   grid-template-rows: auto;
   gap: 80px 50px;
 
+  .text-container {
+    color: var(--texto-sobre-blanco);
+  }
+
   h2 {
     margin-bottom: 30px;
+    color: var(--titulo-sobre-blanco);
   }
 
   .img-container {
     display: flex;
     justify-content: center;
     align-items: center;
+
     .img-data {
       width: 100%;
       height: auto;
@@ -91,6 +98,7 @@ vm-player {
   justify-content: center;
   align-items: center;
   z-index: 2;
+
   .black-fill {
     width: 100%;
     height: 100%;
@@ -99,6 +107,7 @@ vm-player {
     opacity: 0.38;
     border-radius: 15px;
   }
+
   .play-button {
     width: 110px;
     height: 110px;

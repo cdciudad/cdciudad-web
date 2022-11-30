@@ -1,20 +1,10 @@
 <section class="main-container">
   <div class="blob-container">
-    <svg
-      viewBox="0 0 800 500"
-      preserveAspectRatio="none"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="100%"
-      id="blobSvg"
-    >
+    <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
       <g transform="translate(-156, -199)">
         <path>
-          <animate
-            attributeName="d"
-            dur="25000ms"
-            repeatCount="indefinite"
-            values="
+          <animate attributeName="d" dur="25000ms" repeatCount="indefinite" values="
             M398.5,281.5Q392,313,372,338.5Q352,364,319.5,363.5Q287,363,261.5,372.5Q236,382,215.5,363.5Q195,345,167,338Q139,331,79.5,315Q20,299,58.5,258.5Q97,218,129,202Q161,186,151.5,124.5Q142,63,186.5,65.5Q231,68,270.5,66.5Q310,65,314,119.5Q318,174,376.5,170.5Q435,167,420,208.5Q405,250,398.5,281.5Z;
             M424,278.5Q377,307,383.5,356.5Q390,406,349.5,419.5Q309,433,273.5,400Q238,367,203,379Q168,391,154.5,360Q141,329,118.5,306Q96,283,121,255.5Q146,228,127.5,187.5Q109,147,132,116Q155,85,196.5,111.5Q238,138,268.5,118.5Q299,99,311,134Q323,169,385.5,165.5Q448,162,459.5,206Q471,250,424,278.5Z;
             M400,290Q429,330,389,345Q349,360,332.5,407Q316,454,276,419.5Q236,385,215.5,365Q195,345,124,369Q53,393,98,333Q143,273,131,247.5Q119,222,139,203Q159,184,176.5,169Q194,154,211.5,103Q229,52,271,54Q313,56,334,94.5Q355,133,353,169Q351,205,361,227.5Q371,250,400,290Z;
@@ -22,8 +12,7 @@
             M432.5,283Q397,316,385,351.5Q373,387,339,403.5Q305,420,267.5,430Q230,440,180.5,448Q131,456,91.5,425Q52,394,94,334Q136,274,95,241Q54,208,77.5,175Q101,142,141,136Q181,130,207,109.5Q233,89,267,90.5Q301,92,353.5,84.5Q406,77,412,126Q418,175,443,212.5Q468,250,432.5,283Z;
             M419,275.5Q364,301,371.5,347Q379,393,331.5,374.5Q284,356,254,426.5Q224,497,182.5,468Q141,439,147.5,379.5Q154,320,134,299.5Q114,279,64.5,239.5Q15,200,56.5,170Q98,140,128,115Q158,90,194,75.5Q230,61,265.5,77Q301,93,343.5,96Q386,99,418,130Q450,161,462,205.5Q474,250,419,275.5Z;
             M398.5,281.5Q392,313,372,338.5Q352,364,319.5,363.5Q287,363,261.5,372.5Q236,382,215.5,363.5Q195,345,167,338Q139,331,79.5,315Q20,299,58.5,258.5Q97,218,129,202Q161,186,151.5,124.5Q142,63,186.5,65.5Q231,68,270.5,66.5Q310,65,314,119.5Q318,174,376.5,170.5Q435,167,420,208.5Q405,250,398.5,281.5Z;
-            "
-          ></animate>
+            "></animate>
         </path>
       </g>
     </svg>
@@ -37,42 +26,24 @@
       <div class="play-button__container">
         <div [ngClass]="{ 'display-button': !paused }" class="black-fill"></div>
         <button [ngClass]="{ 'display-button': !paused }" class="play-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 160 160"
-            fill="#ffffff"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="#ffffff">
             <path
-              d="M80,0a80,80,0,1,0,80,80A80,80,0,0,0,80,0Zm35.82,88.3L69.53,114.9a10,10,0,0,1-15-8.67V53a10,10,0,0,1,15-8.67L115.82,71A10,10,0,0,1,115.82,88.3Z"
-            />
+              d="M80,0a80,80,0,1,0,80,80A80,80,0,0,0,80,0Zm35.82,88.3L69.53,114.9a10,10,0,0,1-15-8.67V53a10,10,0,0,1,15-8.67L115.82,71A10,10,0,0,1,115.82,88.3Z" />
           </svg>
         </button>
       </div>
       <div class="player-media">
         <vm-player #video_player [paused]="paused">
-          <vm-video
-            cross-origin="true"
-            poster="../../../../assets/foto_casaciudad_franmora.jpg"
-          >
+          <vm-video cross-origin="true" poster="../../../../assets/foto_casaciudad_franmora.jpg">
             <source
               data-src="https://res.cloudinary.com/casa-de-la-ciudad/video/upload/v1646791951/cdciudad/videos/Master_FINAL_Casa_de_la_Ciudad_qlvqmz_ikxghj.mp4"
-              type="video/mp4"
-            />
-            <track
-              default
-              kind="subtitles"
-              src="https://media.vimejs.com/subs/english.vtt"
-              srclang="en"
-              label="English"
-            />
+              type="video/mp4" />
+            <track default kind="subtitles" src="https://media.vimejs.com/subs/english.vtt" srclang="en"
+              label="English" />
           </vm-video>
 
           <vm-default-ui no-click-to-play no-controls>
-            <vm-default-controls
-              hide-on-mouse-leave
-              hideWhenPaused
-              activeDuration="1000"
-            >
+            <vm-default-controls hide-on-mouse-leave hideWhenPaused activeDuration="1000">
             </vm-default-controls>
           </vm-default-ui>
         </vm-player>
@@ -81,39 +52,29 @@
     <section class="history-container">
       <div>
         <h2>La historia de su construcción</h2>
-        <div [innerHTML]="tem1"></div>
+        <div class="text-container" [innerHTML]="tem1"></div>
       </div>
       <div class="img-container">
-        <img
-          class="img-data"
-          [src]="img1"
-          alt="Fotografiá que muestra una casa antigua de Cartago"
-        />
+        <img class="img-data" [src]="img1" alt="Fotografiá que muestra una casa antigua de Cartago" />
       </div>
       <div class="img-container move-img">
-        <img
-          class="img-data"
-          [src]="img2"
-          alt="Fotografiá que muestra Casa de la Ciudad antiguamente, desde la diagonal Sureste"
-        />
+        <img class="img-data" [src]="img2"
+          alt="Fotografiá que muestra Casa de la Ciudad antiguamente, desde la diagonal Sureste" />
       </div>
       <div>
         <h2>
           La familia que le da <br />
           nombre al Edificio
         </h2>
-        <div [innerHTML]="tem2"></div>
+        <div class="text-container" [innerHTML]="tem2"></div>
       </div>
       <div>
         <h2>La historia de su construcción</h2>
-        <div [innerHTML]="tem3"></div>
+        <div class="text-container" [innerHTML]="tem3"></div>
       </div>
       <div class="img-container">
-        <img
-          class="img-data"
-          [src]="img3"
-          alt="Fotografiá antigua de Casa de la Ciudad que indica que fue la primer sede el Tecnológico de Costa Rica"
-        />
+        <img class="img-data" [src]="img3"
+          alt="Fotografiá antigua de Casa de la Ciudad que indica que fue la primer sede el Tecnológico de Costa Rica" />
       </div>
     </section>
     <app-card-message class="card-message"></app-card-message>

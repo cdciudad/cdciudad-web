@@ -43,6 +43,10 @@
   justify-content: center;
   align-items: center;
 
+  p#text {
+    color: var(--texto-sobre-blanco);
+  }
+
   a {
     margin-top: 15px;
     color: var(--naranja-secundario);
