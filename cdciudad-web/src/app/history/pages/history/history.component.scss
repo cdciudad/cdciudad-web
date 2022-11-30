@@ -19,7 +19,7 @@
 
 .content-container {
   width: 100%;
-  padding: 80px 157px;
+  padding: 80px 60px;
 
   h1 {
     color: var(--azul-oscuro);
@@ -36,16 +36,16 @@
 }
 
 .player-media {
-  width: 85%;
+  width: 100%;
   height: 100%;
 }
 
 .player-container:hover {
   cursor: pointer;
   .play-button {
-    width: 150px;
-    height: 150px;
-    transition: 0.5s ease-in-out;
+    width: 100px;
+    height: 100px;
+    transition: 0.3s ease-in-out;
   }
 }
 
@@ -55,7 +55,6 @@
 
 vm-player {
   --vm-player-border-radius: 15px;
-  --vm-player-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.55);
   --vm-poster-z-index: 1;
   --vm-player-z-index: 1;
   --vm-ui-z-index: 1;
@@ -92,7 +91,7 @@ vm-player {
 
 .play-button__container {
   position: absolute;
-  width: 85%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -109,11 +108,11 @@ vm-player {
   }
 
   .play-button {
-    width: 110px;
-    height: 110px;
+    width: 80px;
+    height: 80px;
     background-color: transparent;
     border: none;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
     position: absolute;
   }
 }
@@ -197,3 +196,14 @@ vm-player {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .play-button__container {
+
+    .play-button {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
