@@ -1,26 +1,46 @@
-<nav role="navigation">
+<nav role="navigation" class="main-container">
   <div id="menuToggle">
     <input #checkBox type="checkbox" />
 
     <span></span>
-    <span></span>
+    <span id="half"></span>
     <span></span>
 
     <ul id="menu">
-      <a href="#"><p>Eventos</p></a>
-      <a (click)="showCoursesMenu()"><p>Cursos</p></a>
+      <a href="#">
+        <p>Eventos</p>
+      </a>
+      <a class="arrow" (click)="showCoursesMenu()">
+        <p id="not-margin">Cursos</p>
+        <div>
+          <svg [class.rotate]="coursesMenu" width="8" height="13" viewBox="0 0 8 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7.00381 6.31774C6.99171 6.16171 6.92326 6.01392 6.80938 5.89798L1.3466 0.301106C1.27997 0.232762 1.1994 0.177189 1.10948 0.137562C1.01955 0.0979343 0.922048 0.0750324 0.822525 0.0701544C0.723003 0.0652765 0.623412 0.0785259 0.529442 0.10914C0.435471 0.139755 0.348961 0.18713 0.274851 0.248575C0.200741 0.31002 0.140482 0.384325 0.0975169 0.467246C0.0545515 0.550166 0.0297204 0.640084 0.0244417 0.731854C0.019163 0.823623 0.0335401 0.915452 0.0667518 1.0021C0.0999636 1.08874 0.15136 1.1685 0.218005 1.23683L5.22555 6.36585L0.218005 11.4948C0.15136 11.5632 0.0999636 11.6429 0.0667518 11.7296C0.0335401 11.8162 0.019163 11.9081 0.0244417 11.9998C0.0297204 12.0916 0.0545515 12.1815 0.0975169 12.2644C0.140482 12.3474 0.200741 12.4217 0.274851 12.4831C0.348961 12.5446 0.435471 12.5919 0.529442 12.6226C0.623412 12.6532 0.723003 12.6664 0.822525 12.6615C0.922048 12.6567 1.01955 12.6337 1.10948 12.5941C1.1994 12.5545 1.27997 12.4989 1.3466 12.4306L6.80938 6.8337C6.87766 6.76412 6.93006 6.68258 6.96346 6.59394C6.99686 6.5053 7.01058 6.41137 7.00381 6.31774Z"
+              fill="white" />
+          </svg>
+        </div>
+      </a>
       <div class="courses-menu" [class.showMenu]="coursesMenu">
-        <a href="#" (click)="closed()"><p>Oferta de cursos</p></a>
-        <a routerLink="/cursos/matricula" (click)="closed()"
-          ><p>Matrícula</p></a
-        >
-        <a routerLink="/cursos/pago" (click)="closed()"
-          ><p>Pago de cursos</p></a
-        >
+        <a href="#" (click)="closed()">
+          <p>Oferta de cursos</p>
+        </a>
+        <a routerLink="/cursos/matricula" (click)="closed()">
+          <p>Matrícula</p>
+        </a>
+        <a routerLink="/cursos/pago" (click)="closed()">
+          <p>Pago de cursos</p>
+        </a>
       </div>
-      <a routerLink="/servicios" (click)="closed()"><p>Servicios</p></a>
-      <a routerLink="/equipo" (click)="closed()"><p>Equipo de trabajo</p></a>
-      <a routerLink="/historia" (click)="closed()"><p>Historia</p></a>
+      <a routerLink="/servicios" (click)="closed()">
+        <p>Servicios</p>
+      </a>
+      <a routerLink="/equipo" (click)="closed()">
+        <p>Equipo de trabajo</p>
+      </a>
+      <a routerLink="/historia" (click)="closed()">
+        <p>Historia</p>
+      </a>
     </ul>
   </div>
 </nav>
